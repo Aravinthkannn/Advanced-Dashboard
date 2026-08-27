@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 40% 14%;
+    --card-foreground: 210 40% 98%;
+    --muted: 217 25% 19%;
+    --muted-foreground: 215 20% 65%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --border: 217 25% 24%;
+    --input: 217 25% 24%;
+    --ring: 217 91% 60%;
+    --radius: 0.6rem;
+  }
+  .light {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 215 16% 47%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+  }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+@layer components {
+  .crm-panel { @apply rounded-xl border bg-card shadow-sm; }
+  .muted-label { @apply text-xs font-medium uppercase tracking-wide text-muted-foreground; }
+}
